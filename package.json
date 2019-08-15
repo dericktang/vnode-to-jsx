@@ -30,6 +30,5 @@
     "vue": "2.5.13",
     "eslint-plugin-flowtype": "^4.2.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
