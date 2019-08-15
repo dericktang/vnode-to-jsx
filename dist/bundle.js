@@ -1,0 +1,1 @@
+!function(o,e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):(o=o||self).VNodeToJsx=e()}(this,function(){"use strict";var o=function(o,e,n,t,f){};return o.makeToJsx=function(){["a"].forEach(function(o){console.log(o)})},o.prototype.makeToJsx=function(){["a"].forEach(function(o){console.log(o)})},o});
