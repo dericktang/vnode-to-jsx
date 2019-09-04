@@ -11,7 +11,7 @@ export default {
     format: 'umd', //cjs ,es ,umd must have name
     name: 'VNodeToJsx'
   },
-  plugins: [flow(), resolve(), terser(), commonjs(), buble(),
+  plugins: [flow(), resolve(),  commonjs(), buble(),
     babel({
       exclude: 'node_modules/**' // 只编译我们的源代码
     })

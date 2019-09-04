@@ -8,6 +8,30 @@ declare type VNodeComponentOptions = {
   tag?: string;
 };
 
+declare type MountedComponentVNode = {
+  context: Component;
+  componentOptions: VNodeComponentOptions;
+  componentInstance: Component;
+  parent: VNode;
+  data: VNodeData;
+};
+
+// interface for vnodes in update modules
+declare type VNodeWithData = {
+  tag: string;
+  data: VNodeData;
+  children: ?Array<VNode>;
+  text: void;
+  elm: any;
+  ns: string | void;
+  context: Component;
+  key: string | number | void;
+  parent?: VNodeWithData;
+  componentOptions?: VNodeComponentOptions;
+  componentInstance?: Component;
+  isRootInsert: boolean;
+};
+
 declare interface VNodeData {
   key?: string | number;
   slot?: string;
@@ -40,3 +64,16 @@ declare interface VNodeData {
     callback: Function;
   };
 };
+
+declare type VNodeDirective = {
+  name: string;
+  rawName: string;
+  value?: any;
+  oldValue?: any;
+  arg?: string;
+  oldArg?: string;
+  modifiers?: ASTModifiers;
+  def?: Object;
+};
+
+declare type ScopedSlotsData = Array<{ key: string, fn: Function } | ScopedSlotsData>;
